@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Data</title>
+</head>
+<body>
+    <h1>Data Pengguna</h1>
+    <p>Nama: {{.Nama}}</p>
+    <p>ID: {{.Id}}</p>
+
+    {{with .Alamat}}
+        <h2>Alamat</h2>
+        <ul>
+            {{range $key, $value := .}}
+                <li>{{$key}}: {{$value}}</li>
+            {{end}}
+        </ul>
+    {{end}}
+</body>
+</html>
